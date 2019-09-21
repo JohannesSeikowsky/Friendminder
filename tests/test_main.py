@@ -25,5 +25,10 @@ class FriendminderTests(unittest.TestCase):
 		self.assertFalse(main.is_today(past_date))
 
 
+	def test_get_reminder_settings(self):
+		path = "/home/johannes/code/friendminder/" + "settings/general_settings.txt"
+		vals = main.get_reminder_settings(path)
+		self.assertTrue(len(vals) == 2)
+
 if __name__ == "__main__":
 	unittest.main()
